@@ -16,11 +16,11 @@ body, html {
 
 .hero-section {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 35px;
   position: relative;
   width: 100%;
-  max-width: 1200px;
-  padding-left: 20px; /* same as before */
+  max-width: 1250px;
+  padding-left: 25px; /* same as before */
 }
 
 .logo-text-container {
@@ -45,16 +45,17 @@ body, html {
 .tagline {
   font-size: 1rem;
   color: #8b949e;
-  margin-top: -10px;
+  margin-top: 0px;
+  margin-bottom: 12px; /* increased space below tagline */
 }
 
 .menu-dot {
-  width: 14px;
+  width: px;
   height: 14px;
   border-radius: 50%;
-  background-color: red;
+  background-color: rgb(240, 98, 98);
   border: none;
-  margin-top: 30px; /* more below tagline */
+  margin-top: 50px; /* more below tagline */
   cursor: pointer;
   position: relative;
   left: -50%; /* moved more left */

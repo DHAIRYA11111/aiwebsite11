@@ -10,17 +10,18 @@ function App() {
   const generateImage = async () => {
     setLoading(true);
     try {
-      const response = await fetch(
-        "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-3.5-large",
-        {
-          method: "POST",
-          headers: {
-            Authorization: "Bearer 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",
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ inputs: prompt }),
-        }
-      );
+const response = await fetch(
+  "https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-dev",
+  {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${process.env.REACT_APP_HF_API_KEY}`,
+
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ inputs: prompt }),
+  }
+);
 
       const contentType = response.headers.get("content-type");
 
@@ -45,7 +46,7 @@ function App() {
     <div className="app dark-mode">
       <header className="hero-section">
         <div className="logo-text-container">
-          <h1 className="gradient-title">CHUCKCHUCK</h1>
+          <h1 className="gradient-title">Everything.ai</h1>
           <p className="tagline">simply for everything</p>
           <button
             className="menu-dot"
